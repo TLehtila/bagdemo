@@ -1,0 +1,15 @@
+html { 
+    background-color: #a8a8a8;
+}
+
+#bag {
+    margin: auto;
+    width: 90vw;
+    height: 90vw;
+    background: url("res/bagback3.png") no-repeat center center fixed;
+    -webkit-background-size: 90vw;
+    -moz-background-size: 90vw;
+    -o-background-size: 90vw;
+    background-size: 90vw;
+    background-origin: padding-box;
+}
