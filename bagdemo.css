@@ -1,15 +1,68 @@
-html { 
+body {
+    font-family: sans-serif;
     background-color: #a8a8a8;
+    height: 400vh;
+}
+
+#bagcontainer {
+    margin: auto;
+    width: 80vw;
 }
 
 #bag {
     margin: auto;
+    width: 80vw;
+    z-index: 0;
+    
+
+    position: absolute;
+
+    animation: bagmove linear both;
+    animation-timeline: scroll();
+    
+}
+
+#flap {
+    background-color: rgb(56, 26, 126);
+}
+
+#flaptop {
+    z-index: 20;
     width: 90vw;
-    height: 90vw;
-    background: url("res/bagback3.png") no-repeat center center fixed;
-    -webkit-background-size: 90vw;
-    -moz-background-size: 90vw;
-    -o-background-size: 90vw;
-    background-size: 90vw;
-    background-origin: padding-box;
+    height: 80vw;
+    
+    background-color: rgb(155, 26, 26);
+
+    position: absolute;
+    object-fit: contain;
+
+    animation: flaptopkey linear both;
+    animation-timeline: scroll();
+}
+
+#flapbottom {
+    z-index: 10;
+}
+
+
+@keyframes bagmove {
+    from {
+        transform: translateY(0vh);
+    }
+    to {
+        transform: translateY(600%);
+    }
+}
+
+@keyframes flaptopkey {
+    from { 
+        height: 100vh;
+        object-fit: cover;
+        transform: translateY(0vh);
+    }
+    to {
+        height: 0vh;
+        object-fit: cover;
+        transform: translateY(-40vh);
+    }
 }
