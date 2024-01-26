@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     background-color: #a8a8a8;
-    height: 400vh;
+    height: 400svh;
 }
 
 #bagcontainer {
@@ -13,7 +13,6 @@ body {
     margin: auto;
     width: 80vw;
     z-index: 0;
-    
 
     position: absolute;
 
@@ -22,20 +21,28 @@ body {
     
 }
 
-#flap {
-    background-color: rgb(56, 26, 126);
+#flapcontainer {
+    margin: auto;
+    position: absolute;
+    width: 80vw;
+    
+}
+
+#top {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vw;
+    height: 100vw;
 }
 
 #flaptop {
     z-index: 20;
-    width: 90vw;
-    height: 80vw;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
     
-    background-color: rgb(155, 26, 26);
-
-    position: absolute;
-    object-fit: contain;
-
     animation: flaptopkey linear both;
     animation-timeline: scroll();
 }
@@ -44,25 +51,24 @@ body {
     z-index: 10;
 }
 
-
 @keyframes bagmove {
     from {
-        transform: translateY(0vh);
+        transform: translateY(0svh);
+        object-fit: cover;
     }
     to {
-        transform: translateY(600%);
+        transform: translateY(600svh);
+        object-fit: cover;
     }
 }
 
 @keyframes flaptopkey {
     from { 
         height: 100vh;
-        object-fit: cover;
-        transform: translateY(0vh);
+        margin-top: 0vh;
     }
     to {
         height: 0vh;
-        object-fit: cover;
-        transform: translateY(-40vh);
+        margin-top: 300vh;
     }
 }
